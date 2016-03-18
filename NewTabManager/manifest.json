@@ -1,0 +1,21 @@
+{
+  "name": "New Tab Manager",
+  "description": "Manage which page is shown with New Tab based on your calendar",
+  "version": "0.2",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "redirect.html"
+  },
+  "browser_action": {
+    "default_icon": "SmallLogo.png",
+    "default_title": "New Tab Manager",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": ["lib/jquery.min.js", "js/background.js"]
+  },
+  "manifest_version": 2
+}

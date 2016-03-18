@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='../css/fullcalendar.css' rel='stylesheet' />
+<link href='../css/fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../lib/jquery-ui.js'></script>
+<script src='../lib/jquery-ui.custom.min.js'></script>
+<script src='../js/fullcalendar.min.js'></script>
+<script src='../js/setupScript.js'></script>
+<style>
+
+	body {
+		margin-top: 40px;
+		text-align: center;
+		font-size: 14px;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	}
+		
+	#wrap {
+		width: 1100px;
+		margin: 0 auto;
+	}
+		
+	#external-events {
+		float: left;
+		width: 150px;
+		padding: 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+		text-align: left;
+	}
+		
+	#external-events h4 {
+		font-size: 16px;
+		margin-top: 0;
+		padding-top: 1em;
+	}
+		
+	#external-events .fc-event {
+		margin: 10px 0;
+		cursor: pointer;
+	}
+		
+	#external-events p {
+		margin: 1.5em 0;
+		font-size: 11px;
+		color: #666;
+	}
+		
+	#external-events p input {
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	#calendar {
+		float: right;
+		width: 900px;
+	}
+
+	#editEvent {
+		float: left;
+		bottom: 0;
+		width: 150px;
+		height: 150px;
+		padding: 10px 10px;
+		border: 1px solid #ccc;
+		background: #eee;
+	}
+
+	#addEvent {
+		padding: 3px;
+	}
+	#setTabUrl {
+		padding: 3px;
+	}
+	#newTabUrl{
+		width: 100px;
+	}
+
+</style>
+</head>
+<body>
+	<div id='wrap'>
+
+		<div id='external-events'>
+			<h4>Default new tab</h4>
+			<input type='text' id='newTabUrl'/> 
+			<button id='setTabUrl'>Set</button>
+			<h4>Add Event</h4>
+			Title:<br>
+			<input type='text' id='eventTitle'/>
+			URL:<br>
+			<input type='text' id='eventURL'/>
+			<button id='addEvent'>Add Event</button>
+			<p id='dropCheck'>
+				<input type='checkbox' id='drop-remove' checked/>
+				<label for='drop-remove'>Remove after drop</label>
+			</p>
+			<p>
+			<strong>Delete event</strong>: alt + left click 
+			</p>
+			<p>
+			Remember to save calendar when finished.
+			</p>
+		</div>
+
+		<div id='calendar'></div>
+
+		<!-- <div id='editEvent'></div> -->
+
+		<div style='clear:both'></div>
+
+	</div>
+</body>
+</html>
